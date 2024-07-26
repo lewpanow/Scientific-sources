@@ -20,8 +20,7 @@ print(predict_elements(test_source))
 3) - Предсказание : Модель предсказывает элементы ссылок для нового текста.
 Пример результата:
 
-[image](https://github.com/user-attachments/assets/fa3f043a-9599-4ac2-a6be-a7a358d1134c)
-
+![image](https://github.com/user-attachments/assets/b0c33722-4f25-42b0-aa7b-8ccc8890198a)
 
 ![image](https://github.com/user-attachments/assets/11d044f4-6191-4183-a174-67f3e1207bca)
 
