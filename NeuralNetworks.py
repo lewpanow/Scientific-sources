@@ -52,7 +52,7 @@ def predict_elements(source):
     journal = ' '.join(journal_parts).replace('.', '').replace('//', '').replace('/ /', '').strip()
     journal = re.sub(r'\s+', ' ', journal)
     
-    # Попытка извлечь название журнала из метки O более аккуратно
+    # Попытка извлечь название журнала из метки O
     if len(journal) < 5:
         journal_match = re.search(r'//\s*(.*?)[,.]', source)
         if journal_match:
@@ -63,7 +63,7 @@ def predict_elements(source):
                 journal_part = parts[1].split(',')[0].strip()
                 journal = journal_part
 
-    # Удаляем части, которые не относятся к журналу
+    # Удаляем части, которые не относятся к журналам
     journal_cleaned = []
     for part in journal.split():
         if not re.match(r'^\d+$', part) and not re.match(r'^\w{2,3}$', part):
@@ -75,7 +75,6 @@ def predict_elements(source):
     author = re.sub(r'^\d+\s+', '', author)  # Убираем номер перед именем
     author = re.sub(r'\s+', ' ', author)  # Убираем лишние пробелы
     title = results['C'].replace('.', '').strip()  # Убираем лишние точки
-    title = title.replace('Своиства', 'Свойства')  # Исправляем опечатку
     year = re.search(r'\d{4}', source)  # Извлечение года
     year = year.group(0) if year else ''
     
