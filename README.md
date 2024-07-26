@@ -20,4 +20,5 @@ print(predict_elements(test_source))
 
 
 ![image](https://github.com/user-attachments/assets/11d044f4-6191-4183-a174-67f3e1207bca)
+
 Результаты обучения на  8 эпохах
